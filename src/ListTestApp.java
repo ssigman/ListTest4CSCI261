@@ -1,8 +1,13 @@
 import cs.cscollections.SinglyLinkedList;
 
+/**
+ * Test application for the Lab 5 level SinglyLinked List library code.
+ * */
+
+
 public class ListTestApp {
     public static void main(String [] args) {
-        SinglyLinkedList<Student> roster = new SinglyLinkedList<Student>();
+        SinglyLinkedList<Student> roster = new SinglyLinkedList<>();
 
         // test empty list
         System.out.println("Length of empty SinglyLinkedList is: " + roster.getLength());
@@ -19,7 +24,7 @@ public class ListTestApp {
 
         // add at tail of list
         // start with new list
-        SinglyLinkedList<Student> roster2 = new SinglyLinkedList<Student>();
+        SinglyLinkedList<Student> roster2 = new SinglyLinkedList<>();
 
         // roster two is empty - report it
         System.out.println ("Roster 2 is empty. Empty?: " + roster2.isEmpty());
@@ -31,6 +36,11 @@ public class ListTestApp {
         // add sally at end of list
         roster2.append(sally);
         System.out.println("Roster 2 should have two students. Length?: " + roster2.getLength());
+
+        // add mike at the front of the list
+        Student mike = new Student("Mike", "Sr");
+        roster2.append(mike);
+        System.out.println("Roster 2 should have three students. Length?: " + roster2.getLength());
 
     }
 }
