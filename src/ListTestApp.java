@@ -42,5 +42,10 @@ public class ListTestApp {
         roster2.append(mike);
         System.out.println("Roster 2 should have three students. Length?: " + roster2.getLength());
 
+        // add tim at the end of the list
+        Student tim = new Student("Tim","Sr");
+        roster.append(tim);
+        System.out.println("Tim added at end of roster.  Lenght? " + roster2.getLength());
+
     }
 }
